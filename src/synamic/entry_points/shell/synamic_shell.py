@@ -73,7 +73,7 @@ class CommandProcessor(BaseShell):
         SITE_ROOT = self.__root_site_root
         host = 'localhost'
         port = '8087'
-        return aio_server.serve(SITE_ROOT, host, port)
+        return aio_server.serve(SITE_ROOT, host=host, port=port)
 
     def on_upload(self, *args):
         'Deploy the build'

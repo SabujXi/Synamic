@@ -21,4 +21,5 @@ def serve(root_dir: str, scheme='http', host='localhost', port='8080'):
     synamic.load()
     #  synamic.sites.load()
     app.synamic = synamic
+    print(f'Host: {host}, Port: {port}')
     web.run_app(app, host=host, port=port)

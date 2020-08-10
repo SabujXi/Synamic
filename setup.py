@@ -26,6 +26,7 @@ setup(
     install_requires=[
         'Jinja2>=2.10',
         'MarkupSafe>=1.0',
+        'libsass>=0.15.0',
         'mistune>=0.8.3',
         'Pillow>=5.2.0',
         'sly>=0.3',
