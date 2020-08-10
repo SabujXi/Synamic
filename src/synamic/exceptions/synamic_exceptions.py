@@ -15,11 +15,11 @@ __all__ = [
     # functions
     'get_source_snippet_from_file', 'get_source_snippet_from_text',
     # exception classes
-    'SynamicError', 'SynamicErrors', 'SynamicTemplateError', 'SynamicGetCParsingError',
+    'SynamicError', 'SynamicErrors', 'SynamicTemplateError', 'SynamicQueryParsingError', 'SynamicGetCParsingError',
     'SynamicGetCError', 'SynamicPreProcessorNotFound', 'SynamicMarkerNotFound', 'SynamicMarkNotFound',
-    'SynamicInvalidNumberFormat', 'SynamicModelParsingError',
+    'SynamicInvalidNumberFormat', 'SynamicModelParsingError', 'SynamicInvalidDateTimeFormat',
     'SynamicSettingsError', 'SynamicInvalidCPathComponentError', 'SynamicPathDoesNotExistError',
-    'SynamicFSError', 'SynamicDataError', 'SynamicMarkerIsNotPublic', 'SynamicSiteNotFound',
+    'SynamicSydParseError', 'SynamicFSError', 'SynamicDataError', 'SynamicMarkerIsNotPublic', 'SynamicSiteNotFound',
     'SynamicUserNotFound',
 ]
 
@@ -136,6 +136,14 @@ Details:
 """
 
 
+class SynamicQueryParsingError(SynamicError):
+    """Raised when there is an error in lexing or parsing query string."""
+
+
+class SynamicGetCParsingError(SynamicError):
+    """Raised when there is an error in lexing or parsing param string of getc()"""
+
+
 class SynamicGetCError(SynamicError):
     """Desired result was not found with SynamicGetCError"""
 
@@ -160,6 +168,14 @@ class SynamicInvalidNumberFormat(SynamicError):
     """When number format is invalid"""
 
 
+class SynamicInvalidDateTimeFormat(SynamicError):
+    """When date, time or datetime is invalid"""
+
+
+class SynamicModelParsingError(SynamicError):
+    """When model cannot be parsed properly"""
+
+
 class SynamicSettingsError(SynamicError):
     """Error related to settings and settings values"""
 
@@ -170,6 +186,10 @@ class SynamicInvalidCPathComponentError(SynamicError):
 
 class SynamicPathDoesNotExistError(SynamicError):
     """When the path is non existent"""
+
+
+class SynamicSydParseError(SynamicError):
+    """Syd parse error in curlybrace parser."""
 
 
 class SynamicFSError(SynamicError):

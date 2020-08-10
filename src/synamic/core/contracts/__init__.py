@@ -16,4 +16,4 @@ from .data import DataContract
 # hosts
 from .host import HostContract
 from .site import SiteContract
-from .abc_synamic import AbcSynamic
+from .synamic import SynamicContract
